@@ -17,10 +17,23 @@
 </head>
 
 <body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+  <main class="mt-5 d-flex align-items-center ">
+    <div class="container d-flex justify-content-center">
+      <img src="img/login.png" alt="login" class="img-fluid">
+      <div class="form">
+        <h1 class="h3 mb-3 fw-normal">Bienvenid@! Ingresa tu usuario.</h1>
+    
+        <div class="form-floating my-3" id="divEmail">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email </label>
+        </div>
+
+        <div class="form-floating" id="divPass">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary my-3" type="submit" id="signIn">Ingresar</button>
+
       </div>
     </div>
   </main>
