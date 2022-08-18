@@ -4,10 +4,10 @@ let signIn = document.getElementById('signIn');
 let divEmail = document.getElementById('divEmail');
 let divPass = document.getElementById('divPass');
 
-
-document.addEventListener('DOMContentLoaded', () => {
+function login() {
     signIn.addEventListener('click', () => {
         if (emailInput.value && passInput.value !== "") {
+            localStorage.setItem('user',emailInput.value);
             window.location.href = "index.html"
         } else {
             divEmail.classList.add("border");
@@ -20,5 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }
     })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    login();
 })
 

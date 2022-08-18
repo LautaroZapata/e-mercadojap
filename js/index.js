@@ -12,4 +12,21 @@ document.addEventListener("DOMContentLoaded", function(){
         localStorage.setItem("catID", 103);
         window.location = "products.html"
     });
+
+    let usuario = localStorage.getItem('user');
+
+    if (usuario == null) {
+        this.location.href = "login.html";
+        alert("No iniciaste sesión");
+    }else{
+        document.getElementById('usuario').innerHTML = 'Bienvenid@! ' + '<b>' + usuario + '</b>';
+    }
+
+    // Cerrar sesion
+
+    document.getElementById('btnExit').addEventListener('click', ()=> {
+        alert('Cerraste la sesión');
+        localStorage.clear();
+        this.location.href = "login.html"
+    })
 });

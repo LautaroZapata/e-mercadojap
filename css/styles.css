@@ -192,3 +192,8 @@ a.custom-card:hover {
 .form {
   width: 400px;
 }
+
+.btnExit {
+
+  font-size: 10px;
+}
