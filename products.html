@@ -39,6 +39,32 @@
     </div>
   </nav>
   <main class="pb-5 container">
+    <div class="text-center p-4">
+      <h2>Productos</h2>
+      <p class="lead" id="prodcat"></p>
+    </div>
+    <div class="my-5 container filterProd">
+      <div class="col">
+        <input class="form-control m-2" type="number" placeholder="min." id="minCost">
+      </div>
+      <div class="col">
+        <input class="form-control m-2" type="number" placeholder="máx." id="maxCost">
+      </div>
+      <button class="btn btn-dark btn-block m-2 " id="filterBtn">Filtrar</button>
+      <button class="btn btn-danger btn-block m-2 " id="clearFilterBtn">Limpiar</button>
+
+      <div class="d-flex justify-content-end">
+        <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+          <input type="radio" class="btn-check" name="options" id="sortAsc">
+          <label class="btn btn-light" for="sortAsc">Menor Precio</label>
+          <input type="radio" class="btn-check" name="options" id="sortDesc">
+          <label class="btn btn-light" for="sortDesc">Mayor Precio</label>
+          <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+          <label class="btn btn-light" for="sortByCount">Relevancia <i class="fas fa-sort-amount-down mr-1"></i></label>
+        </div>
+      </div>
+      
+    </div>
     <div class="container">
       <div id="items-list-container">
 
