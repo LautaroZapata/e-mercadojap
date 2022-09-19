@@ -30,7 +30,9 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-flex">
+            <a href="#" class="nav-link" id="usuario"></a>
+            <button class="btn btn-danger btnExit" id="btnExit">Cerrar Sesión</button>
           </li>
         </ul>
       </div>
@@ -38,9 +40,57 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div>
+        <div class="border-bottom">
+          <h1 id="prodTitle" class="my-5"></h1>
+        </div>
+        <div class="my-5">
+          <div>
+            <h5><b>Precio</b></h5>
+            <p id="prodCost"></p>
+          </div>
+          <div>
+            <h5><b>Descripción</b></h5>
+            <p id="prodDesc"></p>
+          </div>
+          <div>
+            <h5><b>Cantidad de vendidos</b></h5>
+            <p id="prodCant"></p>
+          </div>
+          <div>
+            <h5><b>Categoría</b></h5>
+            <p id="prodCat"></p>
+          </div>
+          <div>
+            <h5><b>Imágenes ilustrativas</b></h5>
+            <div id="prodImg" class="d-flex">
+            </div>
+            
+            <div class="my-5">
+              <h5 class="my-2">Comentarios</h5>
+              <div id="comments">
+              </div>
+              
+              <div>
+                <h5 class="my-3">Comenta</h5>
+                <p>Tu opinión:</p>
+                <textarea name="comment" id="comment" cols="80" rows="5" placeholder="Ingresa tu comentario"></textarea>
+                <p>Tu puntuación:</p>
+                <select name="stars" id="starsCant" class="form-select selectStar" id="floatingSelect">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <button type="submit" class="btn btn-primary my-3" id="sendComment">Enviar</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </main>
   <footer class="text-muted">

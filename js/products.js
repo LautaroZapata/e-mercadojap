@@ -2,13 +2,18 @@
 
 let productsArray = [];
 
+function setIdProd(prod) {
+    localStorage.setItem("prodID",prod);
+    window.location = "product-info.html"
+}
+
 function showProductsList(array){
     let htmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){ 
         let products = array[i];
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
+        <div onclick="setIdProd(${products.id})" class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
                     <img src="` + products.image + `" alt="product image" class="img-thumbnail">
@@ -120,6 +125,8 @@ document.addEventListener("DOMContentLoaded", function(e){
         });
         
     });
+
+    // Leer localstorage
     let usuario = localStorage.getItem('user');
 
     if (usuario == null) {

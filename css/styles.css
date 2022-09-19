@@ -201,3 +201,15 @@ a.custom-card:hover {
 .filterProd{
   width: 50%;
 }
+
+textarea{
+  resize: none;
+}
+
+.selectStar{
+  width: 10%;
+}
+
+.checked {
+  color: orange;
+}
