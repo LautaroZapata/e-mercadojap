@@ -213,3 +213,14 @@ textarea{
 .checked {
   color: orange;
 }
+
+
+
+.aCards {
+  text-decoration: none;
+  color: black;
+  height: 200px ;
+  width: 200px;
+  margin: 50px 150px 0px 0px;
+  display: inline-block;
+}

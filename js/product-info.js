@@ -1,6 +1,9 @@
 let idProd = localStorage.getItem('prodID');
 
-
+function relatedProds (prod) {
+    localStorage.setItem("prodID",prod);
+    window.location = "product-info.html";
+}
 
 document.addEventListener('DOMContentLoaded',(e)=> {
     getJSONData(PRODUCT_INFO_URL + idProd + EXT_TYPE)
@@ -21,6 +24,19 @@ document.addEventListener('DOMContentLoaded',(e)=> {
             prodCat.innerHTML = prodInfo.category;
 
             imagesGallery (prodInfo.images);
+
+            let relatedProds = document.getElementById('relatedProducts');
+
+            for (let i = 0; i < prodInfo.relatedProducts.length; i++) {
+                relatedProds.innerHTML += `
+                <div onclick="relatedProds(${prodInfo.relatedProducts[i].id})" class="aCards border ">
+                    <img src="${prodInfo.relatedProducts[i].image}" height="200px">
+                    <p>${prodInfo.relatedProducts[i].name}</p>
+                </div>
+            `
+            }
+            
+            
         }
     })
     getJSONData(PRODUCT_INFO_COMMENTS_URL + idProd + EXT_TYPE)
@@ -122,7 +138,3 @@ function commentText() {
     `
     document.getElementById('comments').innerHTML += li;
 }
-
-
-
-
