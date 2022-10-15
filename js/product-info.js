@@ -138,3 +138,4 @@ function commentText() {
     `
     document.getElementById('comments').innerHTML += li;
 }
+

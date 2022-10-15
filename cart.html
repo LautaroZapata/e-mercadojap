@@ -29,16 +29,89 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="usuario"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="desplegable">
+              <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+              <button class="btn btn-danger btnExit" id="btnExit">Cerrar Sesión</button>
+            </ul>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="d-flex justify-content-center my-5">
+        <h2>Carrito de compras</h2>
+      </div>
+
+      <h5>Artículos a comprar</h5>
+
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Costo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <th scope="row" id="imgProduct"></th>
+              <td id="nameProductCart"></td>
+              <td><span id="currency"></span><span id="unitCost"></span></td>
+              <td><input type="number" id="inputCantCart" class="inputCantCart" min="1"></td>
+              <td id="totalProductCart"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div>
+        <h5 class="my-5">Tipo de envío</h5>
+
+        <div class="my-5">
+          <div>
+            <input type="radio" name="opciones" id="premium">
+            <label for="premium">Premium 2 a 5 días (15%)</label>
+          </div>
+          <div>
+            <input type="radio" name="opciones" id="express">
+            <label for="Express">Express 5 a 8 días (7%)</label>
+          </div>
+          <div>
+            <input type="radio" name="opciones" id="standar">
+            <label for="Standar">Standar 12 a 15 días (5%)</label>
+          </div>
+          
+          
+        </div>
+        <h5>Dirección de envío</h5>
+
+        <div class="d-flex">
+          <div>
+            <p>Calle</p>
+            <input type="text" name="" id="">
+          </div>
+          <div class="mx-5">
+            <p>Número</p>
+            <input type="text" name="" id="">
+          </div>
+        </div>
+
+        <div>
+          <p>Esquina</p>
+          <input type="text" name="" id="">
+        </div>
+        
+        
       </div>
     </div>
   </main>
