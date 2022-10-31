@@ -236,3 +236,11 @@ textarea{
   padding: 10px 15px 10px 15px;
   border-radius: 2%;
 }
+
+.btncard {
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  color: #0087F7;
+
+}

@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded',(e)=> {
             commentText()
         });
         
-        
+        addCarrito(prodCarrito);
 });
 
 
@@ -138,4 +138,3 @@ function commentText() {
     `
     document.getElementById('comments').innerHTML += li;
 }
-

@@ -30,7 +30,8 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
               <span id="usuario"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="desplegable">
@@ -73,7 +74,7 @@
           </tbody>
         </table>
       </div>
-      
+
       <div>
         <h5 class="my-5">Tipo de envío</h5>
 
@@ -90,30 +91,106 @@
             <input type="radio" name="opciones" id="standar">
             <label for="Standar">Standar 12 a 15 días (5%)</label>
           </div>
-          
-          
+
+
         </div>
         <h5>Dirección de envío</h5>
 
-        <div class="d-flex">
+
+          <div class="d-flex">
+            <div>
+              <p>Calle</p>
+              <input type="text" name="calle" id="calle">
+            </div>
+            <div class="mx-5">
+              <p>Número</p>
+              <input type="text" name="numero" id="numero">
+            </div>
+          </div>
+  
           <div>
-            <p>Calle</p>
-            <input type="text" name="" id="">
+            <p>Esquina</p>
+            <input type="text" name="esquina" id="esquina">
           </div>
-          <div class="mx-5">
-            <p>Número</p>
-            <input type="text" name="" id="">
+        
+
+
+      </div>
+
+      <div>
+        <h5 class="my-5">Costos</h5>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">Subtotal <span id="subtotal"></span></li>
+            <li class="list-group-item d-flex justify-content-between">Costo de envío <span id="costoEnvio"></span></li>
+            <li class="list-group-item d-flex justify-content-between">Total <span id="totalcompra"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h5>Forma de pago</h5>
+
+        <div class="d-flex">
+          <p>No has seleccionado</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btncard" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Seleccionar
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Forma de pago</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border">
+                  <input type="radio" name="metodo">
+                  <label for="Tarjeta">Tarjeta de crédito</label>
+                </div>
+                <div class="modal-body border">
+                  <div class="my-3">
+                    <label for="TarjetaText" class="my-5">Número de la tarjeta</label>
+                    <input type="text" name="tarjetaname" size="15">
+                  </div>
+                  <div class="my-5">
+                    <label for="TarjetaCode">Código de seg.</label>
+                    <input type="text" name="tarjetacode" size="5">
+                  </div>
+                  <div class="my-5">
+                    <label for="TarjetaVenc">Vencimiento (MM/AA)</label>
+                    <input type="text" name="tarjetavenc" size="15">
+                  </div>
+
+                  <div class="border my-5">
+                    <label for="Transferencia">Transferencia bancaria</label>
+                    <input type="radio" name="metodo" id="transferencia">
+                  </div>
+
+                  <div class="my-5">
+                    <label for="TransferenciaNumero">Número de cuenta</label>
+                    <input type="text" name="transferencia" id="transferenciaNumero">
+                  </div>
+                  
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <button class="btn btn-primary" id="finalizarcompra">Finalizar Compra</button>
         </div>
 
-        <div>
-          <p>Esquina</p>
-          <input type="text" name="" id="">
-        </div>
-        
-        
       </div>
     </div>
+
+
   </main>
   <footer class="text-muted">
     <div class="container">
