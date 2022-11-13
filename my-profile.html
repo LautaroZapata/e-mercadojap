@@ -44,18 +44,63 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="usuario"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="desplegable">
+              <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+              <button class="btn btn-danger btnExit" id="btnExit">Cerrar Sesión</button>
+            </ul>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="m-5  border-bottom">
+        <h2>Perfil</h2>
       </div>
+      <div class="m-5 d-flex flex-wrap">
+        <div class="mx-2">
+          <h5>Primer nombre: *</h5>
+          <input type="text" size="60" id="primerNombre">
+        </div>
+        <div class="mx-2">
+          <h5>Segundo nombre:</h5>
+          <input type="text" size="60">
+        </div>
+
+        <div class="mx-2 my-5">
+          <h5>Primer apellido: *</h5>
+          <input type="text" size="60" id="primerApellido">
+        </div>
+        <div class="mx-2 my-5">
+          <h5>Segundo apellido:</h5>
+          <input type="text" size="60">
+        </div>
+
+        <div class="mx-2 my-2">
+          <h5>E-mail: *</h5>
+          <input type="text" size="60" id="email">
+        </div>
+        <div class="mx-2 my-2">
+          <h5>Teléfono de contacto:</h5>
+          <input type="text" size="60">
+        </div>
+
+
+      </div>
+      <button class="btn btn-primary mx-5" id="btnGuardarCambios">Guardar Cambios</button>
     </div>
+
+    <div class="alert alert-danger fade" id="alert-error" role="alert">
+      Completa los datos obligatorios
+    </div>
+    
   </main>
   <footer class="text-muted">
     <div class="container">
